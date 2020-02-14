@@ -93,11 +93,12 @@ public class Book {
    
     public String showInfo(){
         
-        return "the title is " + title + " the author is : " + author.getFirstName() + ", " + author.getLastName() + ". The discription is :" + description + ". The isbn: " +isbn + " the published by " + publisher; 
+        return "Id: "+id+",the title is " + title + " the author is : " + author.getFirstName() + ", " + author.getLastName() + ". The discription is :" + description + ". The isbn: " +isbn + " the published by " + publisher; 
     }
     
+    @Override
     public String toString(){
-            return "the title is " + title + " the author is : " + author.getFirstName() + ", " + author.getLastName() + ". The discription is :" + description + ". The isbn: " +isbn + " the published by " + publisher; 
+            return "Id: "+id+",the title is " + title + " the author is : " + author.getFirstName() + ", " + author.getLastName() + ". The discription is :" + description + ". The isbn: " +isbn + " the publisher is: " + publisher; 
 
 }
         public int getId() {

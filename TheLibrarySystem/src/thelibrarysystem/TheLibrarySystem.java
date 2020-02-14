@@ -48,8 +48,12 @@ public  String showBooks(){
 
 
 public  void addBook(String t, String d,String i ,String a,String p){
-    //Author author= new Author(a.split(" ")[0],a.split(" ")[1]);
-    Author author= new Author("sdfsfsdf","sdfsdf");
+    String firstName = "";
+    String lastName = "";
+    if(a.split(" ")[0] != null) firstName = a.split(" ")[0];
+    if(a.split(" ")[1] != null) lastName = a.split(" ")[1];
+    Author author= new Author(firstName,lastName);
+    //Author author= new Author("sdfsfsdf","sdfsdf");
     Book b = new Book(t,d,i,p,author);
      list.add(b);
         
@@ -176,5 +180,5 @@ public Book getBookById(int id){
  
 }
 
-
+}
 
