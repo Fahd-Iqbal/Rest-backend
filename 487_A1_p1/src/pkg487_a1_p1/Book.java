@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement()
 public class Book {
-    private int id;;
+    private int id;
     private static int count=0;
     private String title; 
     private String description; 
@@ -23,18 +23,27 @@ public class Book {
     private Author author; 
     
     
-    Author a1 = new Author("you","and us");
+    
     public Book(){
         this.id=count++;
         this.title= "Thank You Kobe ";
         this.description = "a book to that goes into how kobe helped shapped the lives of people";
         this.isbn = "100 ";
         this.publisher = "your boy ";
-        this.author = a1; // like this because its an object
+        this.author = null; // like this because its an object
     }
     
     public Book(String title, String description, String isbn, String publisher, Author author){
         this.id=count++;
+        this.title= title; 
+        this.description=description; 
+        this.isbn= isbn; 
+        this.publisher=publisher; 
+        this.author=author; 
+    }
+    
+    public Book(int id, String title, String description, String isbn, String publisher, Author author){
+        this.id=id;
         this.title= title; 
         this.description=description; 
         this.isbn= isbn; 
@@ -74,7 +83,7 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public String getAuthorFirstNAme() {
+    public String getAuthorFirstName() {
         return author.getFirstName();
     }
 
@@ -83,7 +92,7 @@ public class Book {
     }
     
     
-    public String getAuthorLastNAme(){
+    public String getAuthorLastName(){
         return this.author.getLastName();
     }
     
